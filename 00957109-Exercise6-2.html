@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<!-- 
+    Reference: 
+    https://codepen.io/knaman2609/pen/Zbyjvv
+    https://pixabay.com/illustrations/donald-trump-america-president-5103361/ 
+-->
+
+<head>
+    <meta charset="utf-8">
+    <title>00957109-Exercise6-2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            min-height: 100%;
+            background: linear-gradient(to right,rgb(187, 187, 236),rgb(204, 242, 204));
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 400;
+            color: #222;
+            font-size: 14px;
+            line-height: 26px;
+            padding-bottom: 50px;
+        }
+
+        .container {
+            max-width: 700px;
+            background: #fff;
+            margin: 0px auto 0px;
+            box-shadow: 1px 1px 2px #DAD7D7;
+            border-radius: 3px;
+            padding: 40px;
+            margin-top: 50px;
+        }
+
+        .header {
+            margin-bottom: 30px;
+        }
+
+        .full-name {
+            font-size: 40px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .first-name {
+            font-weight: 700;
+        }
+
+        .last-name {
+            font-weight: 300;
+        }
+
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+        .email,
+        .phone {
+            color: #999;
+            font-weight: 300;
+        }
+
+        .separator {
+            height: 10px;
+            display: inline-block;
+            border-left: 2px solid #999;
+            margin: 0px 10px;
+        }
+
+        .position {
+            font-weight: bold;
+            display: inline-block;
+            margin-right: 10px;
+            text-decoration: underline;
+        }
+
+        .details {
+            line-height: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section:last-of-type {
+            margin-bottom: 0px;
+        }
+
+        .section__title {
+            letter-spacing: 2px;
+            color: #e4b254;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .section__list-item {
+            margin-bottom: 40px;
+        }
+
+        .section__list-item:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .left,
+        .right {
+            vertical-align: top;
+            display: inline-block;
+        }
+
+        .left {
+            width: 60%;
+        }
+
+        .right {
+            text-align: right;
+            width: 39%;
+        }
+
+        .name {
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+            font-style: italic;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #000;
+        }
+
+        .skills__item {
+            margin-bottom: 10px;
+        }
+
+        input {
+            display: none;
+        }
+
+        label {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: #C3DEF3;
+            border-radius: 20px;
+            margin-right: 3px;
+        }
+
+        input:checked+label {
+            background: #79A9CE;
+        }
+    </style>
+</head>
+
+<body>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+
+    <div class="container">
+        <div class="header">
+            <div class="full-name">
+                <span class="first-name">Meme</span>
+                <span class="last-name">Man</span>
+            </div>
+            <div class="contact-info">
+                <span class="email">Email: </span>
+                <span class="email-val">no_choice_man@meme.com</span>
+                <span class="separator"></span>
+                <span class="phone">Phone: </span>
+                <span class="phone-val">123-456-7890</span>
+            </div>
+
+            <div>
+                <img src="memeMan.png" width="60%" style="display:block; margin:auto;">
+            </div>
+
+            <div class="about">
+                <span class="position">Full-Stack Developer </span>
+                <span class="desc">
+                    I am a front-end developer with more than 3 years of experience writing html, css, and js and I am
+                    also a Java software engineer with more than 2 years.
+                    I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow.
+                </span>
+            </div>
+        </div>
+        <div class="details">
+            <div class="section">
+                <div class="section__title">Experience</div>
+                <div class="section__list">
+                    <div class="section__list-item">
+                        <div class="left">
+                            <div class="name">No Choice company</div>
+                            <div class="addr">Taipei, Taiwan</div>
+                            <div class="duration">Jan 2016 - Feb 2019</div>
+                        </div>
+                        <div class="right">
+                            <div class="name">Fr developer</div>
+                            <div class="desc">develop web-page</div>
+                        </div>
+                    </div>
+                    <div class="section__list-item">
+                        <div class="left">
+                            <div class="name">What done is done company</div>
+                            <div class="addr">Tainan, Taiwan</div>
+                            <div class="duration">Jan 2020 - Feb 2022</div>
+                        </div>
+                        <div class="right">
+                            <div class="name">Java software engineer</div>
+                            <div class="desc">develop Java project</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="section">
+                <div class="section__title">Education</div>
+                <div class="section__list">
+                    <div class="section__list-item">
+                        <div class="left">
+                            <div class="name">National Taiwan Ocean University</div>
+                            <div class="addr">No.2, Beining Rd., Zhongzheng Dist., Keelung City 202301, Taiwan (R.O.C.)</div>
+                            <div class="duration">Sep 2020 - Jun 2024</div>
+                        </div>
+                        <div class="right">
+                            <div class="name">Student</div>
+                            <div class="desc">CSE</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="section">
+                <div class="section__title">Projects</div>
+                <div class="section__list">
+                    <div class="section__list-item">
+                        <div class="name">shopping site</div>
+                        <div class="text">I have participated in the development of a well-known shopping website, 
+                            which is currently used by more than 100,000 users</div>
+                    </div>
+
+                    <div class="section__list-item">
+                        <div class="name">Android App</div>
+                        <div class="text">I developed an android application using java, 
+                            the application is now downloaded by more than 50,000 people
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section__title">Skills</div>
+                <div class="skills">
+                    <div class="skills__item">
+                        <div class="left">
+                            <div class="name">
+                                Javascript
+                            </div>
+                        </div>
+                        <div class="right">
+                            <img src="js.png" style="width: 30px;height:30px">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="skills__item">
+                    <div class="left">
+                        <div class="name">
+                            CSS</div>
+                    </div>
+                    <div class="right">
+                        <img src="css.png" style="height: 30px;width:30px">
+                    </div>
+                </div>
+                <div class="skills__item">
+                    <div class="left">
+                        <div class="name">
+                            C++</div>
+                    </div>
+                    <div class="right">
+                        <img src="c++.png" style="width: 30px;height:30px">
+                    </div>
+                </div>
+                <div class="skills__item">
+                    <div class="left">
+                        <div class="name">
+                            Java</div>
+                    </div>
+                    <div class="right">
+                        <img src="java.png" style="width: 30px;height:30px">
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="section__title">
+                    Interests
+                </div>
+                <div class="section__list">
+                    <div class="section__list-item">
+                        electric guitar, programming, lego.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
